@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  ecs-tools: foobar/fantasticorp-ecs-tools@dev:try
+  ecs-tools: foobar/fantasticorp-ecs-tools@0.0.1
 
 workflows:
   version: 2
@@ -19,7 +19,7 @@ workflows:
           context: org-global
           requires:
             - ecs-tools/test
-          # filters:
-          #   branches:
-          #     only:
-          #       - master
+          filters:
+            branches:
+              only:
+                - master
