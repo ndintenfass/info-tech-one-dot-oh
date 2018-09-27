@@ -156,7 +156,7 @@ workflows:
       - hold:
           type: approval
           requires:
-            - test
+            - ecs-tools/test
       - ecs-tools/deploy:
           context: org-global
           requires:
