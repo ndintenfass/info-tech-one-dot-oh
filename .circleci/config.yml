@@ -153,14 +153,14 @@ workflows:
       - ecs-tools/test:
           requires:
             - ecs-tools/build
-      - hold:
-          type: approval
-          requires:
-            - ecs-tools/test
+      # - hold:
+      #     type: approval
+      #     requires:
+      #       - ecs-tools/test
       - ecs-tools/deploy:
           context: org-global
           requires:
-            - hold
+            - ecs-tools/test
           # filters:
           #   branches:
           #     only:
