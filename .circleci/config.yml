@@ -9,7 +9,7 @@ orbs:
             type: string
             default: "latest"
         docker:
-          - image: gerey/saasdemo-docker-image:<< parameters.string >>
+          - image: gerey/saasdemo-docker-image:<< parameters.tag >>
         working_directory: ~/ecs-tools-working
 
     commands:
